@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iphone",
+      "catagoryid": 2,
+      "description": "128gb smartphone",
+      "price": "1200",
+      "isAvailable": true,
+      "rating": 4,
+      "vendor-name": "apple.inc"
+    },
+    {
+      "id": 2,
+      "name": "headphone",
+      "catagoryid": 2,
+      "description": "80 oms headphone with inbuilt mic",
+      "price": "200",
+      "isAvailable": true,
+      "rating": 4,
+      "vendor-name": "sony"
+    },
+    {
+      "id": 3,
+      "name": "detergent",
+      "catagoryid": 1,
+      "description": "surfexcel top loading detergent",
+      "price": "400",
+      "isAvailable": true,
+      "rating": 4,
+      "vendor-name": "surf-excel"
+    },
+    {
+      "id": 4,
+      "name": "tide pods",
+      "catagoryid": 1,
+      "description": "pods for washing machine",
+      "price": "500",
+      "isAvailable": true,
+      "rating": 4,
+      "vendor-name": "tide"
+    },
+    {
+      "id": 5,
+      "name": "plastic container",
+      "catagoryid": 3,
+      "description": "air tight plastic container for food",
+      "price": "600",
+      "isAvailable": true,
+      "rating": 4,
+      "vendor-name": "family-plastics"
+    }
+  ],
+  "comments": [
+    { "id": 0, "body": "", "postId": 1 },
+    { "id": 0, "body": "", "postId": 2 },
+    { "id": 0, "body": "", "postId": 3 },
+    { "id": 0, "body": "", "postId": 4 }
+  ],
+  "profile": { "name": "typicode" }
+}

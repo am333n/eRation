@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
 import { ProductsModule } from './products/products.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     NgbModule,
     SiteLayoutModule,
-    ProductsModule
+    ProductsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
