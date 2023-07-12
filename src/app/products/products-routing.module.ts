@@ -10,8 +10,7 @@ import { ViewProductByCatagoryComponent } from './view-product-by-catagory/view-
 import { ViewProductByPriceComponent } from './view-product-by-price/view-product-by-price.component';
 
 const routes: Routes = [
-  { path: '', component: ProductsComponent },
-  { path: 'products', component: ViewProductsComponent },
+  { path: '', component: ViewProductsComponent },
   { path: 'view-product/:id', component: ViewProductComponent },
   { path: 'edit-products/:id', component: EditProductsComponent },
   { path: 'dlt-products/:id', component: DeleteProductComponent },

@@ -7,12 +7,15 @@ import { SiteLayoutModule } from './site-layout/site-layout.module';
 import { ProductsModule } from './products/products.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import Swal from 'sweetalert2'
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,

@@ -1,61 +1,141 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "iphone",
+      "name": " Green Rice",
       "catagoryid": 2,
-      "description": "128gb smartphone",
-      "price": "1200",
+      "description": "pachari",
+      "price": "120",
       "isAvailable": true,
       "rating": 4,
-      "vendor-name": "apple.inc"
+      "vendorName": "noorjahan",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "headphone",
-      "catagoryid": 2,
-      "description": "80 oms headphone with inbuilt mic",
+      "name": "Matta Rice",
+      "catagoryid": "2",
+      "description": "pachari",
       "price": "200",
       "isAvailable": true,
       "rating": 4,
-      "vendor-name": "sony"
+      "vendorName": "Cow brand",
+      "id": 2
     },
     {
       "id": 3,
-      "name": "detergent",
+      "name": "Aatta",
       "catagoryid": 1,
-      "description": "surfexcel top loading detergent",
-      "price": "400",
+      "description": "whole wheat aatta",
+      "price": "40",
       "isAvailable": true,
       "rating": 4,
-      "vendor-name": "surf-excel"
+      "vendorName": "ashirvad"
     },
     {
-      "id": 4,
-      "name": "tide pods",
+      "name": "Maida",
       "catagoryid": 1,
-      "description": "pods for washing machine",
-      "price": "500",
+      "description": "all purpose flour",
+      "price": "50",
       "isAvailable": true,
       "rating": 4,
-      "vendor-name": "tide"
+      "vendorName": "Taj flour",
+      "id": 4
     },
     {
       "id": 5,
-      "name": "plastic container",
+      "name": "Kerosine",
       "catagoryid": 3,
-      "description": "air tight plastic container for food",
-      "price": "600",
+      "description": "blue kerosine",
+      "price": "60",
       "isAvailable": true,
       "rating": 4,
-      "vendor-name": "family-plastics"
+      "vendorName": "Bharat Kerosinium"
+    },
+    {
+      "name": "Sugar",
+      "catagoryid": "3",
+      "description": "sweet sugar ",
+      "price": 50,
+      "isAvailable": true,
+      "rating": "3",
+      "vendorName": "kerala gov",
+      "id": 6
+    },
+    {
+      "name": "Basmati rice",
+      "catagoryid": "2",
+      "description": "premium north indian basmati rice",
+      "price": 200,
+      "isAvailable": true,
+      "rating": "5",
+      "vendorName": "Maharaj",
+      "id": 7
+    },
+    {
+      "name": "Onam kit",
+      "catagoryid": "1",
+      "description": "kerala sarkar free onam kit to celebrate onam",
+      "price": "1",
+      "isAvailable": true,
+      "rating": "5",
+      "vendorName": "Pinarayi vijayan",
+      "id": 8
+    },
+    {
+      "name": "Puzhukkalari",
+      "catagoryid": "2",
+      "description": "worm rice",
+      "price": 50,
+      "isAvailable": true,
+      "rating": "1",
+      "vendorName": "heisenberg",
+      "id": 9
+    },
+    {
+      "name": "",
+      "catagoryid": "",
+      "description": "",
+      "price": "",
+      "isAvailable": true,
+      "rating": "",
+      "vendorName": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "catagoryid": "",
+      "description": "",
+      "price": "",
+      "isAvailable": true,
+      "rating": "",
+      "vendorName": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "catagoryid": "",
+      "description": "",
+      "price": "",
+      "isAvailable": true,
+      "rating": "",
+      "vendorName": "",
+      "id": 12
     }
   ],
-  "comments": [
-    { "id": 0, "body": "", "postId": 1 },
-    { "id": 0, "body": "", "postId": 2 },
-    { "id": 0, "body": "", "postId": 3 },
-    { "id": 0, "body": "", "postId": 4 }
+  "catagories": [
+    {
+      "id": 1,
+      "name": "Wheat"
+    },
+    {
+      "id": 2,
+      "name": "Rice"
+    },
+    {
+      "id": 3,
+      "name": "Other"
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

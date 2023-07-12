@@ -1,1 +1,88 @@
-<p>edit-products works!{{id}}</p>
+<form  (submit)="updateProduct(updateform)" #updateform="ngForm">
+    <div class="card mx-auto col-6" >
+      <div class="card-header d-flex">
+        <h6 class="align-self-center mb-0">Edit</h6>
+        <button type="button" class="btn btn-secondary ms-auto" (click)="clear()">Clear</button>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="hidden" [(ngModel)]="productDetails.id">
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="product name"
+            [(ngModel)]="productDetails.name"
+            />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Price</label>
+          <input
+            type="number"
+            [(ngModel)]="productDetails.price"
+            class="form-control"
+            name="price"
+            placeholder="in Rupees"
+            ngModel
+            />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea
+            class="form-control"
+            name="desc"
+            rows="3"
+            placeholder="description goes here..............."
+            [(ngModel)]="productDetails.description"
+          > </textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Product Catagory</label>
+          <select
+            class="form-select"
+            aria-label=".form-select-lg example"
+            name="catid"
+            [(ngModel)]="productDetails.catagoryid"
+          >
+            <option selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Vendor Name</label>
+          <input
+            type="text"
+            value="{{productDetails.vendorName}}"
+            class="form-control"
+            name="vendorName"
+            placeholder="vendor name"
+            [(ngModel)]="productDetails.vendorName"
+            />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Rating</label>
+          <select
+            class="form-select"
+            aria-label=".form-select-lg example"
+            name="rating"
+            [(ngModel)]="productDetails.rating"
+          >
+            <option selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+  
+        <div class="text-center pt-3">
+          <button type="submit" class="btn btn-primary">Update product</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  

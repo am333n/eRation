@@ -1,34 +1,87 @@
-<form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Email address</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<form (submit)="createProductform(form)" #form="ngForm">
+  <div class="card mx-auto col-6">
+    <div class="card-header d-flex">
+      <h6 class="align-self-center mb-0">Add - New Ration Product</h6>
+      <button type="button" class="btn btn-secondary ms-auto">Clear</button>
     </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input
+          value=""
+          type="text"
+          class="form-control"
+          name="name"
+          placeholder="product name"
+          required
+          ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Price</label>
+          <input
+          required
+          type="number"
+          class="form-control"
+          name="price"
+          placeholder="in Rupees"
+          ngModel
+          />
       </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          name="desc"
+          rows="3"
+          placeholder="description goes here..............."
+          ngModel
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Product Catagory</label>
+        <select
+          class="form-select"
+          aria-label=".form-select-lg example"
+          name="catid"
+          ngModel
+        >
+          <option selected>Open this select menu</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Vendor Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="vendorName"
+          placeholder="vendor name"
+        ngModel
+          />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Rating</label>
+        <select
+          class="form-select"
+          aria-label=".form-select-lg example"
+          name="rating"
+          ngModel
+        >
+          <option selected>Open this select menu</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="text-center pt-3">
+        <button type="submit" class="btn btn-primary">Submit Form</button>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect2">Example multiple select</label>
-      <select multiple class="form-control" id="exampleFormControlSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-  </form>
+  </div>
+</form>
