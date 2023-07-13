@@ -7,7 +7,7 @@ import { SiteLayoutModule } from './site-layout/site-layout.module';
 import { ProductsModule } from './products/products.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2'
 @NgModule({
   declarations: [
@@ -21,9 +21,13 @@ import Swal from 'sweetalert2'
     NgbModule,
     SiteLayoutModule,
     ProductsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}

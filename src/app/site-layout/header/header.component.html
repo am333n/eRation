@@ -9,30 +9,29 @@
           <a class="nav-link"  [class.active]="router.url==='/'" routerLink="" >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [class.active]="router.url==='/products'"  routerLink="/products">Rations</a>
+          <a class="nav-link" [class.active]="router.url==='/products'" routerLinkActive #rla="routerLinkActive" routerLink="/products"  [routerLinkActiveOptions]="{ exact: true }">Rations</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            href="#"
-            role="button"
-            aria-expanded="false"
-            >Catagories</a
-          >
-          <ul class="dropdown-menu">
-            <li><a  class="dropdown-item" >View Products</a></li>
-            <li><a class="dropdown-item" href="#">something else</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
+        <div *ngIf="rla.isActive" class="customBox">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Catagories</a
+            >
+            <ul class="dropdown-menu">
+              <li *ngFor="let cat of catagories"><a  class="dropdown-item" >{{cat.name}}</a></li>
+            </ul>
+          </li>
+        </div> 
+      
+        <li class="nav-item" >
           <a class="nav-link"  [class.active]="router.url==='/products/add-product'"  routerLink="products/add-product">New Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link"[class.active]="router.url==='/products/cart'" routerLink="/products/cart"><i class="bi bi-cart-fill"> Your Cart</i></a>
         </li>
       </ul>
       <div>

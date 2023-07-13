@@ -8,6 +8,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { AddProductsComponent } from './add-products/add-products.component';
 import { ViewProductByCatagoryComponent } from './view-product-by-catagory/view-product-by-catagory.component';
 import { ViewProductByPriceComponent } from './view-product-by-price/view-product-by-price.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: ViewProductsComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'add-product', component: AddProductsComponent },
   { path: 'search-price', component: ViewProductByPriceComponent },
   { path: 'search', component: ViewProductByCatagoryComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 @NgModule({

@@ -24,5 +24,9 @@ export class ProductsService {
     const productUrl='http://localhost:3000/products/'+id
     return this.http.put<Products>(productUrl,products)
   }
+  deleteproduct(id:number):Observable<Products>{
+    const productUrl='http://localhost:3000/products/'+id
+    return this.http.delete<Products>(productUrl)
+  }
 }
 

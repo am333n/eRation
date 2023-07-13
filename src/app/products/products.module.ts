@@ -10,7 +10,10 @@ import { EditProductsComponent } from './edit-products/edit-products.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ViewProductByCatagoryComponent } from './view-product-by-catagory/view-product-by-catagory.component';
 import { ViewProductByPriceComponent } from './view-product-by-price/view-product-by-price.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from '../site-layout/sidebar/sidebar.component';
+import { SiteLayoutModule } from '../site-layout/site-layout.module';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -22,12 +25,15 @@ import { FormsModule } from '@angular/forms';
     EditProductsComponent,
     DeleteProductComponent,
     ViewProductByCatagoryComponent,
-    ViewProductByPriceComponent
+    ViewProductByPriceComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    SiteLayoutModule
   ],
   exports:[
     ProductsComponent,

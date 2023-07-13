@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import {Router, ActivatedRoute, Params} from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 import { ProductsService } from '../products.service';
 import { Products } from '../products';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
@@ -9,7 +11,7 @@ import { Products } from '../products';
 })
 export class ViewProductComponent {
   id=0
-  constructor(private activatedRoute: ActivatedRoute, private productservice:ProductsService) {
+  constructor(private activatedRoute: ActivatedRoute, private productservice:ProductsService,private router:Router) {
     
   }
   productDetails !:Products
@@ -25,5 +27,36 @@ export class ViewProductComponent {
   });
   
   }
-
+  
+    paused = false;
+    pause() {
+        this.paused = true;
+    }
+    resume = () => {
+        this.paused = false;
+  }
+  delete() {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.actualdelete();
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+      }
+    });
+  }
+  actualdelete() {
+    this.productservice.deleteproduct(this.id).subscribe({
+      next: (data) => {
+        this.router.navigate([`/products`]);
+      },
+    });
+  }
 }
+

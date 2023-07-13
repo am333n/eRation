@@ -1,19 +1,21 @@
-<form  (submit)="updateProduct(updateform)" #updateform="ngForm">
+<form [formGroup]="updateform" *ngIf="updateform" >
     <div class="card mx-auto col-6" >
       <div class="card-header d-flex">
         <h6 class="align-self-center mb-0">Edit</h6>
-        <button type="button" class="btn btn-secondary ms-auto" (click)="clear()">Clear</button>
+        <div class="ms-auto">
+        <button type="button" class="btn btn-secondary me-1" (click)="clear()">Clear</button>
+        <button type="button" class="btn btn-danger " (click)="delete()"><i class="bi bi-trash3-fill"></i></button>
+      </div>
       </div>
       <div class="card-body">
         <div class="form-group">
           <label for="exampleFormControlInput1">Name</label>
-          <input type="hidden" [(ngModel)]="productDetails.id">
           <input
             type="text"
             class="form-control"
             name="name"
             placeholder="product name"
-            [(ngModel)]="productDetails.name"
+            formControlName="name"
             />
         </div>
         <div class="form-group">
@@ -24,7 +26,7 @@
             class="form-control"
             name="price"
             placeholder="in Rupees"
-            ngModel
+            formControlName="price"
             />
         </div>
         <div class="form-group">
@@ -34,7 +36,7 @@
             name="desc"
             rows="3"
             placeholder="description goes here..............."
-            [(ngModel)]="productDetails.description"
+            formControlName="description"
           > </textarea>
         </div>
         <div class="form-group">
@@ -43,7 +45,7 @@
             class="form-select"
             aria-label=".form-select-lg example"
             name="catid"
-            [(ngModel)]="productDetails.catagoryid"
+            formControlName="catagoryid"
           >
             <option selected></option>
             <option value="1">1</option>
@@ -55,11 +57,10 @@
           <label for="exampleFormControlInput1">Vendor Name</label>
           <input
             type="text"
-            value="{{productDetails.vendorName}}"
             class="form-control"
             name="vendorName"
             placeholder="vendor name"
-            [(ngModel)]="productDetails.vendorName"
+            formControlName="vendorName"
             />
         </div>
         <div class="form-group">
@@ -68,7 +69,7 @@
             class="form-select"
             aria-label=".form-select-lg example"
             name="rating"
-            [(ngModel)]="productDetails.rating"
+            formControlName="rating"
           >
             <option selected></option>
             <option value="1">1</option>
@@ -80,7 +81,7 @@
         </div>
   
         <div class="text-center pt-3">
-          <button type="submit" class="btn btn-primary">Update product</button>
+          <button type="submit" class="btn btn-primary" (click)="updateProduct(productDetails.id)">Update product</button>
         </div>
       </div>
     </div>

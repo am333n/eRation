@@ -3,11 +3,10 @@
     {
       "name": " Green Rice",
       "catagoryid": 2,
-      "description": "pachari",
+      "description": "pachari nalla ari",
       "price": "120",
-      "isAvailable": true,
-      "rating": 4,
       "vendorName": "noorjahan",
+      "rating": 4,
       "id": 1
     },
     {
@@ -46,7 +45,7 @@
       "catagoryid": 3,
       "description": "blue kerosine",
       "price": "60",
-      "isAvailable": true,
+      "isAvailable": false,
       "rating": 4,
       "vendorName": "Bharat Kerosinium"
     },
@@ -89,36 +88,6 @@
       "rating": "1",
       "vendorName": "heisenberg",
       "id": 9
-    },
-    {
-      "name": "",
-      "catagoryid": "",
-      "description": "",
-      "price": "",
-      "isAvailable": true,
-      "rating": "",
-      "vendorName": "",
-      "id": 10
-    },
-    {
-      "name": "",
-      "catagoryid": "",
-      "description": "",
-      "price": "",
-      "isAvailable": true,
-      "rating": "",
-      "vendorName": "",
-      "id": 11
-    },
-    {
-      "name": "",
-      "catagoryid": "",
-      "description": "",
-      "price": "",
-      "isAvailable": true,
-      "rating": "",
-      "vendorName": "",
-      "id": 12
     }
   ],
   "catagories": [
@@ -133,6 +102,10 @@
     {
       "id": 3,
       "name": "Other"
+    },
+    {
+      "id": 4,
+      "name": "Electronics"
     }
   ],
   "profile": {
